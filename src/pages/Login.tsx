@@ -3,13 +3,10 @@ import styles from './Login.module.css'
 import { useState} from 'react'
 import { ChangeEvent, FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
 const Login = () => {
 
     const [userId, setUserId] = useState('')
-    const [users, setUsers] = useState('')
-    const dispatch = useDispatch()
     const navigate = useNavigate()
 
     function userIdStore(e: ChangeEvent<HTMLInputElement>) {
@@ -63,7 +60,11 @@ const Login = () => {
                 <button
                     onClick={loginBtn}
                     className={styles.loginBtn}>Login</button>
-                <p style={{ marginTop: "3rem" }}><a href='/signup'>Sign Up</a></p>
+                <p 
+                onClick={()=>{
+                    navigate('/signup')
+                }}
+                style={{ marginTop: "3rem" }}></p>
             </form>
 
 
