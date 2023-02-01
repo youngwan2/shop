@@ -64,7 +64,7 @@ const Login = () => {
                 onClick={()=>{
                     navigate('/signup')
                 }}
-                style={{ marginTop: "3rem" }}></p>
+                style={{ marginTop: "3rem" }}>Sign up</p>
             </form>
 
 
