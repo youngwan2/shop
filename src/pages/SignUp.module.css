@@ -1,0 +1,81 @@
+.title {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 1px 5px 8px black;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 빨간테두리 및 V 및 X 표시 */
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: 20px;
+  top: -23px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+/* form */
+.form {
+  width: 80%;
+  height: 100vh;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -30%);
+  line-height: 70px;
+  text-align: center;
+}
+
+.form label {
+  display: inline-block;
+  width: 80px;
+}
+
+.name,.password, .phone {
+  margin-right: 7rem;
+}
+
+
+@media screen and (max-width: 543px) {
+  .phone button,
+  .username button,
+  .email button {
+    width: 80px;
+  }
+  .phone input,
+  .name input,
+  .email input,
+  .username input {
+    width: 150px;
+  }
+
+  .phone button,
+  .username button,
+  .email button {
+    margin-right: 1.81rem;
+  }
+
+  .form {
+    min-width: 501px;
+  }
+}

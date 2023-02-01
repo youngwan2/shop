@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "e_mail": "anduf12@ffsfs.com",
+      "first_name": "Lee",
+      "last_name": "Jeng",
+      "username": "andufr12",
+      "password": "dktltl!2",
+      "phone": "010-1111-1111",
+      "id": 1
+    },
+    {
+      "e_mail": "anduf12@ffsfs.com",
+      "first_name": "first",
+      "last_name": "last",
+      "username": "qodna25",
+      "password": "dktltl!2",
+      "phone": "010-1111-1111",
+      "id": 2
+    },
+    {
+      "e_mail": "anduf12@ffsfs.com",
+      "first_name": "afdfd",
+      "last_name": "fsdfsdfds",
+      "username": "qodna25",
+      "password": "dktltl!2",
+      "phone": "010-1111-1111",
+      "id": 3
+    },
+    {
+      "e_mail": "anduf12@ffsfs.com",
+      "first_name": "afdfd",
+      "last_name": "fsdfsdfds",
+      "username": "qodna253",
+      "password": "dktltl!2",
+      "phone": "010-1111-1111",
+      "id": 4
+    },
+    {
+      "e_mail": "anduf12@ffsfs.com",
+      "first_name": "afdfd",
+      "last_name": "fsdfsdfds",
+      "username": "qodna2535",
+      "password": "dktltl!22",
+      "phone": "010-1111-1111",
+      "id": 5
+    }
+  ]
+}

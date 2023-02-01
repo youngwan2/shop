@@ -1,0 +1,99 @@
+.item_container {
+  width: 80%;
+  height: 100%;
+  top: 20%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -10%);
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: 1s;
+}
+
+.image {
+  cursor: pointer;
+  transition: 1s;
+  width: 40%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 1px gray;
+  z-index: 100;
+}
+
+.image.action {
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-origin: left left;
+  position: absolute;
+  left: 50%;
+  transform: scale(1.05) translateX(-50%);
+}
+
+.contents {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.contents div {
+  padding: 5px;
+}
+
+.contents .description {
+  margin-top: 1rem;
+  background-color: rgb(179, 170, 170);
+  line-height: 30px;
+}
+
+.price {
+  margin-top: 2rem;
+}
+button {
+  transition: 1s;
+  text-align: center;
+  width: 48%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem 5px 5px 5px;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 1px 5px 5px 2px gray;
+}
+.putBtn {
+  background-color: tomato;
+}
+
+.loadingImage{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 400px; width: 60%;
+}
+
+
+
+@media screen and (max-width: 1030px) {
+  .item_container {
+    text-align: center;
+    flex-direction: column;
+    top: 10%;
+    left: 47%;
+  }
+
+  .image {
+    margin-top: 13.34rem;
+    margin-left: 3rem;
+  }
+
+  .image.action {
+    width: 50%;
+    left: -5%; top:-20%;
+    transform: scale(1.1) translateX(43%);
+  }
+}

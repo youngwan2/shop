@@ -1,0 +1,23 @@
+.table{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+}
+
+.tr th, .tr td{
+    border: 1px solid black;
+}
+
+
+.payBtn, .cancelBtn{
+    width: 39%;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+}
+
+.cancelBtn{
+    background-color: tomato;
+}

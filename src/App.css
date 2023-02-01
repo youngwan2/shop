@@ -1,38 +1,93 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------컴포넌트(페이지 제외) */
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.Header {
+  transition: 1s;
+  position: relative;
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Nav {
+}
+
+.Banner {
+  background-color: rgba(128, 128, 128, 0.19);
+  position: relative;
+  margin-top: 7rem;
+  width: 100vw;
+  height: 60vh;
+  border: 1px dashed black;
+}
+
+.Products {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 2rem;
+}
+
+.Detail {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.Cart{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    border: 1px dashed black;
+    margin-top: 7rem;
+}
+
+.Login{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.SignUp{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.Taps{
+  position: relative;
+  margin-top: 10rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Description{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* input 공통 스타일 적용 */
+input[type="text"],input[type="password"],input[type="tel"],input[type='number']{
+  padding: 10px;
+  width: 40vw;
+  max-width: 300px;
+  margin: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*------------------------ 페이지 컴포넌트 */

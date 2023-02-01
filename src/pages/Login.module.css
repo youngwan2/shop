@@ -1,0 +1,44 @@
+.login_form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.login_title {
+  text-align: center;
+}
+
+@media screen and (max-height: 1000px) {
+  .login_title {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .login_title {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-height: 489px) {
+  .login_title {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+  }
+}
+
+@media screen and (max-height: 375px) {
+  .login_title {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.detail_taps{
+    width: 100%;
+    border: 1px dashed black;
+    display: flex;
+    justify-content: center;
+}
+
+.detail_taps button{
+    width: 30%;
+    max-width: 200px;
+}
+
+.detail_taps button:hover{
+    cursor: pointer;
+    color:black;
+    background-color: rgb(71, 230, 255);
+}

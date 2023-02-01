@@ -1,0 +1,23 @@
+.banner_con{
+    margin-top: 4.5rem;
+    position: absolute;
+    left: 10%;
+    width: 80vw;
+    height: 100vh;
+    transform: perspective(600px) rotateX(0deg) translateZ(30px);
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.banner_con>h1,.banner_con span{
+    transition: 1s;
+    font-size: 3rem;
+    color:rgb(131, 131, 144);
+    text-shadow: 38px 29px 1px rgba(42, 30, 30, 0.088);
+}
+
+.banner_con>h1:hover span{
+    letter-spacing: 10px;
+    transition: 1s;
+    color:rgb(9, 107, 182);
+}
