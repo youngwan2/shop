@@ -54,7 +54,7 @@ function App() {
         <Route path="/detail/:id" element={<Detail />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
         <Route path='/login' element={<Login />}></Route>
-        <Route path='/sign_up' element={<SignUp />}></Route>
+        <Route path='/signup' element={<SignUp />}></Route>
       </Routes>
     </div>
   );

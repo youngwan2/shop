@@ -63,7 +63,7 @@ const Login = () => {
                 <button
                     onClick={loginBtn}
                     className={styles.loginBtn}>Login</button>
-                <p style={{ marginTop: "3rem" }}><a href='/sign_up'>Sign Up</a></p>
+                <p style={{ marginTop: "3rem" }}><a href='/signup'>Sign Up</a></p>
             </form>
 
 
