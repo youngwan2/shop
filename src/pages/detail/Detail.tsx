@@ -1,16 +1,20 @@
 import React from 'react';
 import axios from 'axios';
-import styles from '../pages/Detail.module.css';
+import styles from './Detail.module.css'
 import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
-import { itemsType } from '../components/component/Products';
-import Taps from '../components/component/TapsComponents/Taps';
+import { itemsType } from '../../components/component/Products';
+import Taps from '../../components/component/TapsComponents/Taps';
+import Modal from '../../components/component/modal(detail)/Modal';
 
 
 const Detail = () => {
+
+    const [modalState,setModalState] = useState(false);
+
     const { id } = useParams();
     const [items, setItems] = useState<itemsType>();
     const [action, setAction] = useState('');
@@ -31,16 +35,6 @@ const Detail = () => {
         }
     }
 
-    const postReq = () => {
-        axios.post('https://fakestoreapi.com/carts', {
-            method: "POST",
-            body: JSON.stringify(
-                {
-
-                }
-            )
-        })
-    }
     return (
         <>
             <div className='Detail'>
@@ -65,20 +59,19 @@ const Detail = () => {
                                 <button className={styles.purchaseBtn}>Purchase</button>
                                 <button
                                     onClick={() => {
-                                        postReq()
+                                      setModalState(true)
                                     }}
                                     className={styles.putBtn}>Add</button>
                             </div>
                         </div>
                     </div> : <img
-                                className={styles.loadingImage}
-                                 src={process.env.PUBLIC_URL + '/spinner.gif'} alt="spinner"></img>}
+                        className={styles.loadingImage}
+                        src={process.env.PUBLIC_URL + '/spinner.gif'} alt="spinner"></img>}
 
             </div>
             <Taps />
+            {modalState&&<Modal onClose ={setModalState} items={items!}></Modal>}
         </>
-
-
     );
 };
 

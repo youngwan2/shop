@@ -1,6 +1,6 @@
 .detail_taps{
     width: 100%;
-    border: 1px dashed black;
+    box-shadow: 0 30px 20px 1px black;
     display: flex;
     justify-content: center;
 }
@@ -8,6 +8,7 @@
 .detail_taps button{
     width: 30%;
     max-width: 200px;
+    margin: 1rem;
 }
 
 .detail_taps button:hover{

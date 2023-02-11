@@ -10,9 +10,11 @@
 }
 
 .banner_con>h1,.banner_con span{
+    position: relative;
+    z-index: 100;
     transition: 1s;
     font-size: 3rem;
-    color:rgb(131, 131, 144);
+    color:rgb(115, 115, 119);
     text-shadow: 38px 29px 1px rgba(42, 30, 30, 0.088);
 }
 
@@ -21,3 +23,4 @@
     transition: 1s;
     color:rgb(9, 107, 182);
 }
+

@@ -4,7 +4,7 @@ import styles from './Description.module.css'
 const Description = () => {
     return (
         <article className='Description'>
-            <h1>상세설명</h1>
+            <h1 className={styles.title}>Description</h1>
             <img
                 className={styles.img}
                 src={process.env.PUBLIC_URL + "/fakeDetail.png"}

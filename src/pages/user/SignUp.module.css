@@ -1,0 +1,74 @@
+.signup_container {
+  width: 100vw;
+  height: 100vh;
+  border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup_container #signup_form {
+  width: 600px;
+  height: 600px;
+  box-shadow: 0 5px 15px black;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup_container #signup_form #signup_form_inner_con {
+  width: 100%;
+  text-align: center;
+}
+
+.signup_container #signup_form #signup_form_inner_con #title{
+    margin-bottom: 2rem;
+}
+
+/* 아이디, 이름, 비밀번호, 비밀번호 확인 */
+.signup_container #signup_form #signup_form_inner_con input{
+    background-color: rgb(144, 141, 141);
+    border: none;
+    font-size: 16px;
+}
+.signup_container #signup_form #signup_form_inner_con input::placeholder{
+    color: white;
+    font-size: 16px; letter-spacing: 1.5px;
+}
+
+/* 전송 버튼 및 로그인 화면 되돌아가기 버튼 */
+#signup_etc{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#signup_etc #submit_btn{
+    transition: 1s;
+    width: 276px;
+    line-height: 36px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#signup_etc #submit_btn:hover{
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 1px 15px transparent, 200px 50px 15px rgb(125, 216, 228) inset;
+}
+
+#signup_etc #prev_btn{
+    margin-top: 2rem;
+}
+
+#signup_etc #prev_btn:hover{
+    color: brown;
+    cursor: pointer;
+}

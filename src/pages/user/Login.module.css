@@ -1,0 +1,78 @@
+.login_container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("/public/login_image/login_back.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login_container .login_form {
+  background-color: white;
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_container .login_form .login_form_inner_con .title {
+  padding-bottom: 50px;
+}
+/* 유저 아이디와 비밀번호 */
+#username,
+#password {
+  background-color: rgb(179, 173, 173);
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+#username::placeholder,
+#password::placeholder {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* 로그인 버튼 */
+.login_etc {
+  width: 100%;
+  margin-top: 2rem;
+}
+.login_etc .login_btn {
+  text-align: center;
+  margin: 0 auto;
+  line-height: 34px;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.login_etc .login_btn:hover {
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 1px 15px transparent, 200px 50px 15px rgb(125, 216, 228) inset;
+}
+
+/* 회원가입 이동 버튼 */
+.login_etc .signup_btn {
+  margin-top: 2rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login_etc .signup_btn:hover {
+  color: brown;
+}
+
+

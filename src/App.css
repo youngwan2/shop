@@ -4,37 +4,75 @@
   box-sizing: border-box;
 }
 
-/* --------------------컴포넌트(페이지 제외) */
-
 body {
   width: 100%;
   overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
 }
 
+/* 페이지 컴포넌트 처리 영역 */
+/*Login.tsx  */
+.Login{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* SignUp.tsx */
+.SignUp{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../public/waves.png');
+}
+
+/* Detail.tsx */
+.Detail {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Cart.tsx */
+.Cart{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0rem;
+    background-image: url('../public/waves.png');
+    opacity: 1;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+/* --------------------UI 등 컴포넌트(페이지 제외) */
+
+/* Header.tsx */
 .Header {
   transition: 1s;
   position: relative;
   width: 100vw;
   height: 50px;
-  background-color: black;
+  min-width: 300px;
+  background-color: rgb(0, 0, 0);
   color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.Nav {
-}
-
+/* Banner.tsx */
 .Banner {
-  background-color: rgba(128, 128, 128, 0.19);
-  position: relative;
-  margin-top: 7rem;
   width: 100vw;
-  height: 60vh;
+  height: 100vh;
   border: 1px dashed black;
 }
 
+/* Products.tsx */
 .Products {
   position: relative;
   width: 100vw;
@@ -42,52 +80,93 @@ body {
   margin-top: 2rem;
 }
 
-.Detail {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.Cart{
-    position: relative;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    border: 1px dashed black;
-    margin-top: 7rem;
-}
-
-.Login{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.SignUp{
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-
+/* Taps.tsx */
 .Taps{
+  min-width: 300px;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 16rem;
   width: 100vw;
   height: 100vh;
 }
 
-.Description{
+/* Reviews.tsx , Description.tsx */
+.Reviews,.Description{
+  background-color: transparent;
+  padding: 15px;
   text-align: center;
+  margin-top: 3rem;
+}
+
+/* Pagination.tsx */
+.Pagination{
+  display: flex;
+  justify-content: center;
+}
+
+/* ControlBtn.tsx */
+.btn{
+  border-radius: 50px;
+  margin: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+}
+.btn.active{
+    background-color: white;
 }
 
 
-/* input 공통 스타일 적용 */
-input[type="text"],input[type="password"],input[type="tel"],input[type='number']{
+/* -------------------------------------------------------
+ --------------   기타 공통 css 적용 영역 ----------------
+ --------------------------------------------------------*/
+
+ /* input 공통 스타일 적용 */
+input[type="text"],input[type="password"],input[type="tel"],input[type='number'],select{
   padding: 10px;
   width: 40vw;
   max-width: 300px;
   margin: 5px;
 }
 
-/*------------------------ 페이지 컴포넌트 */
+
+/* button 공통 스타일 적용 */
+button {
+  transition: 1s;
+  text-align: center;
+  width: 48%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem 5px 5px 5px;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 1px 5px 5px 2px gray;
+}
+
+/* input valid */
+input + span {
+  position: relative;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
+}
+
+/* input:valid{
+  border: paleturquoise 2px;
+} */
+
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}

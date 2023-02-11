@@ -32,20 +32,17 @@
   transition: 1s;
   display: inline-block;
   list-style: none;
-  margin: 15px;
+  margin: 22px 25px 22px 25px;
 }
 
 .link {
   position: relative;
-  color: gray;
-  transition: 1s;
-  margin: 0 15px 0 15px;
+  color: rgb(207, 206, 206);
+  transition: 0.1s;
+  margin: 0 20px 0 20px;
 }
 .menu li:hover .link {
-  background-color: white;
-  padding: 2px;
-  border-radius: 5px;
-  color: black;
+  color: gold;
 }
 
 .inner_search_con {
@@ -71,6 +68,8 @@
   margin-left: 0.5rem;
   padding: 13px 8vw 13px 13px;
   border-radius: 5px;
+
+
 }
 
 .login:hover{
@@ -85,14 +84,15 @@
 
   .inner_search_con {
     border: none;
+    z-index: 100;
     opacity: 0;
     display: block;
     transition: 1s;
-    width: 100vw;
+    width: 100%;
     background-color: black;
     position: absolute;
     top: 2.8rem;
-    left: -10px;
+    left: 0;
     padding: 5px;
     transform: translateX(-500px);
   }

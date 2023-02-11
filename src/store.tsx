@@ -1,5 +1,6 @@
 import { createSlice,configureStore } from "@reduxjs/toolkit";
-// import { categorySlice } from "./slice/categorySlice";
+import { pageSlice } from "./slice/pageSlice";
+import { cartDelSlice } from "./slice/cartDelSlice";
 
 
 
@@ -20,7 +21,9 @@ export const {send} = categorySlice.actions
 
 export default configureStore({
     reducer:{
-        category : categorySlice.reducer
+        category : categorySlice.reducer,
+        page : pageSlice.reducer,
+        cartDel : cartDelSlice.reducer
     }
 })
 

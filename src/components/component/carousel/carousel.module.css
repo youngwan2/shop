@@ -1,0 +1,21 @@
+.Carousel{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    transition: 1s;
+}
+
+.item_con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: 1s linear;
+    transform: translate(-000vw);
+}
+
+.item{
+    transition: 1s;
+    height: 100vh;
+    width: 100vw;
+}
+

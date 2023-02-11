@@ -1,0 +1,33 @@
+.ul li{
+    display: inline-block;
+    margin: 8px;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    color:white;
+}
+
+.ul li:hover{
+    background-color: rgb(164, 157, 150);
+    color: black;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+
+.container p{
+    cursor: pointer;
+    display: flex;
+    color: white;
+    margin: 8px;    padding: 5px;
+}
+
+.container p:hover{
+    color:gold;
+}

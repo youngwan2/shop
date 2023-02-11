@@ -1,0 +1,14 @@
+.ControlBtn{
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 50%;
+    list-style:none;
+    transform: translate(-50%);
+    flex-direction: column;
+}
+
+
+
