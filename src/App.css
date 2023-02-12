@@ -69,7 +69,6 @@ body {
 .Banner {
   width: 100vw;
   height: 100vh;
-  border: 1px dashed black;
 }
 
 /* Products.tsx */
@@ -97,6 +96,15 @@ body {
   margin-top: 3rem;
 }
 
+.Reviews{
+  background-image:url('../public/review/review_back.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  margin-top: 5rem;
+
+}
+
 /* Pagination.tsx */
 .Pagination{
   display: flex;
@@ -113,6 +121,13 @@ body {
 }
 .btn.active{
     background-color: white;
+}
+
+/* Inquiry.tsx */
+.Inquiry{
+  width: 100vw;
+  height: 100vh;
+  border: 1px dashed black;
 }
 
 
@@ -169,4 +184,10 @@ input:invalid + span::before {
 input:valid + span::before {
   content: "✓";
   color: green;
+}
+
+/* Pagination.tsx */
+
+.pagination_li{
+  background-color: gray
 }

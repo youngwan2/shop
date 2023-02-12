@@ -19,17 +19,7 @@
       "id": 3
     }
   ],
-  "cart": [
-    {
-      "product_id": "3",
-      "product_name": "Mens Cotton Jacket",
-      "product_image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      "size": "S",
-      "count": "2",
-      "total": "111.98",
-      "id": 1
-    }
-  ],
+  "cart": [],
   "reviews": [
     {
       "id": 1,

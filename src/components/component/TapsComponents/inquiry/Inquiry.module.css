@@ -1,0 +1,27 @@
+
+#title{
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 22px;
+}
+
+#table_outer_container{
+    padding-top: 2rem;
+    text-align: center;
+    margin: 1.5rem auto;
+    width: 50%;
+    min-width: 700px;
+    height: 80vh;
+    border: 1px dashed red;
+
+}
+
+#inquiry_table{
+    width: 100%;
+    border: 1px solid black;
+}
+
+#inquiry_table th{
+    background-color: black;
+    color: white;
+}
