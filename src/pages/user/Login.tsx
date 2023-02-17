@@ -3,8 +3,11 @@ import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getUsersType } from "../../components/component/Types/getUsersType";
+import { getUsername } from "../../slice/usernameSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,6 +39,8 @@ const Login = () => {
     if (getUsers && idx)
       if (getUsers[idx].password === password) {
         sessionStorage.setItem("login", "true");
+        localStorage.setItem("username", username);
+        dispatch(getUsername(username))
         navigate("/");
       } else return alert("Passwords do not match");
   };

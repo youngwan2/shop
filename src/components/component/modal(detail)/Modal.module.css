@@ -8,6 +8,8 @@
 }
 
 .modal_form {
+  border-radius: 10px;
+  box-shadow: 2px 5px 15px rgba(46, 38, 38, 0.623);
   position: fixed;
   max-width: 600px;
   min-width: 400px;
@@ -16,7 +18,6 @@
   top: 50%;
   width: 80vw;
   height: 60vh;
-  border: 1px solid black;
   background-color: rgb(255, 255, 255);
 }
 

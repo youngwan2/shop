@@ -19,7 +19,17 @@
       "id": 3
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "product_id": "2",
+      "product_name": "Mens Casual Premium Slim Fit T-Shirts ",
+      "product_image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "size": "S",
+      "count": "1",
+      "total": "22.3",
+      "id": 1
+    }
+  ],
   "reviews": [
     {
       "id": 1,
@@ -242,6 +252,36 @@
       "username": "hbrattan108",
       "image": "http://dummyimage.com/192x100.png/cc0000/ffffff",
       "review": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    }
+  ],
+  "inquiry": [
+    {
+      "title": "제목",
+      "author": "kim",
+      "content": "김영완",
+      "date": "2023. 2. 17. 오후 1:40:12",
+      "id": 1
+    },
+    {
+      "title": "이름",
+      "author": "kim",
+      "content": "ㄹㄴㅇㄹㅇㄴ",
+      "date": "2023. 2. 17. 오후 1:47:10",
+      "id": 2
+    },
+    {
+      "title": "돈내놔",
+      "author": "kim",
+      "content": "내돈내놩",
+      "date": "2023. 2. 17. 오후 3:00:24",
+      "id": 3
+    },
+    {
+      "title": "fdsfds",
+      "author": "kim",
+      "content": "fsdfds",
+      "date": "2/17/2023, 3:15:56 PM",
+      "id": 4
     }
   ]
 }

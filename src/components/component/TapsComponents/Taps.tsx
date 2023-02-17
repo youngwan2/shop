@@ -6,8 +6,10 @@ import Inquiry from "./inquiry/Inquiry";
 import { useState } from "react";
 
 const Taps = () => {
+  // taps 컴포넌트
   const [taps] = useState([<Description />, <Reviews />, <Inquiry />]);
   const [count, setCount] = useState(0);
+  // taps 버튼 타이틀
   const [tapTitle] = useState(["Description", "Reviews", "Inquiry"]);
 
   return (

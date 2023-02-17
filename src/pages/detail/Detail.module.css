@@ -1,3 +1,4 @@
+/* 상세 페이지 아이템의 프레임 */
 .item_container {
   width: 80%;
   height: 100%;
@@ -11,9 +12,12 @@
   align-items: center;
   transform-style: preserve-3d;
   transition: 1s;
+  opacity: 0.95;
 }
 
+/* 상품이미지 */
 .image {
+  box-shadow: 1px 5px 15px ;
   cursor: pointer;
   transition: 1s;
   min-width: 400px;
@@ -21,11 +25,13 @@
   max-height: 400px;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   z-index: 100;
   padding-bottom: 30px;
+  background-color: black;
 }
 
+/* 상품이미지 클릭 시 적용되는 효과 */
 .image.action {
   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   transform-origin: left left;
@@ -38,42 +44,73 @@
   padding: 10px;
   margin-top: 1rem;
   margin-left: 3rem;
-  background: transparent;
   width: 95%;
+  font-size: 17px;
 }
 
-.contents .title{
- padding: 10px;
+.contents .title {
+  padding: 10px;
+  color: #000000;
+  background: transparent;
+  box-shadow: 0px 2px 1px black;
+  text-shadow: 1px 3px 0 #bcb9b9;
 }
 
 .contents div {
   padding: 5px;
 }
 
+/* 상품 상세설명 */
 .contents .description {
+  transition: 1s;
   margin-top: 0.25rem;
-  background-color: rgb(179, 170, 170);
+  background-color: rgba(56, 57, 58, 0.735);
+  color:white;
   line-height: 25px;
 }
 
+.contents .description:hover{
+  transform: scale(1.03);
+  background-color: rgb(164, 33, 70);
+}
+
+/* 상품 가격 */
 .price {
   margin-top: 1.25rem;
 }
 
-.putBtn {
-  background-color: tomato;
+.price, .vote{
+  font-size: 18px;
 }
 
-.loadingImage{
+/* 장바구니 추가/구매 버튼 */
+.putBtn,.purchaseBtn {
+  background-color: rgba(46, 44, 44, 0.926);
+  height: 50px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.putBtn:hover,.purchaseBtn:hover{
+  box-shadow: 1px 5px 15px gray,
+  inset 200px 80px rgb(19, 89, 136),
+  inset -200px -80px powderblue;
+
+}
+
+/* 구매 버튼 */
+
+/* 로딩스피너 이미지 */
+.loadingImage {
   text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
-  height: 400px; width: 60%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 60%;
 }
-
-
 
 @media screen and (max-width: 1030px) {
   .item_container {
@@ -89,7 +126,6 @@
     margin-left: 9%;
     min-width: 100px;
     max-width: 200px;
-
   }
 
   .image.action {
@@ -97,6 +133,4 @@
     left: 50%;
     transform: scale(1.1) translateX(-50%);
   }
-
-
 }
