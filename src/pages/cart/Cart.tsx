@@ -20,12 +20,15 @@ const Cart = () => {
 
   // 장바구니 아이템 삭제
   useEffect(() => {
-    if (cartId !== 0)
+    if (cartId !== 0) {
       axios
         .delete(`http://localhost:3001/cart/${cartId}`)
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
+      window.location.replace(`${window.location.href}`);
+    }
   }, [cartId]);
+  
   // 장바구니 아이템 추가
   const getItem = () => {
     axios
@@ -37,7 +40,6 @@ const Cart = () => {
   useEffect(() => {
     getItem();
   }, []);
-
 
   return (
     <div className="Cart">

@@ -1,26 +1,4 @@
-.cartLoginCon {
-  display: flex;
-}
-
-.cartLoginCon article {
-  margin: 8px;
-}
-
-.cartLoginCon .cart_icon:hover{
-    cursor: pointer;
-    color:gold
-}
-
-.search_cart {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-}
-
-.search_cart div {
-  margin: 5px;
-}
-
+/* 카테고리 바(三) */
 .category_bars {
   display: none;
 }
@@ -35,7 +13,7 @@
   margin: 22px 25px 22px 25px;
 }
 
-.link {
+.menu .menu_list .link {
   position: relative;
   color: rgb(207, 206, 206);
   transition: 0.1s;
@@ -44,11 +22,12 @@
 .menu li:hover .link {
   color: gold;
 }
-
+/* 카테고리 바 내부 검색창(미디어 쿼리 적용 시) */
 .inner_search_con {
   display: none;
 }
 
+/* 카테고리 바 외부 검색창(미디어 쿼리 적용 이전) */
 .outer_search_con {
   text-align: center;
   transform: perspective(800px) rotateX(8deg) translate3d(0, 80px, 100px);
@@ -68,20 +47,35 @@
   margin-left: 0.5rem;
   padding: 13px 8vw 13px 13px;
   border-radius: 5px;
-
-
 }
 
-.login:hover{
-    cursor: pointer;
-    color:gold;
+/* 카드 및 로그인 버튼을 감싸는 컨테이너 */
+.cartLoginCon {
+  display: flex;
+}
+
+.cartLoginCon article {
+  margin: 8px;
+}
+
+.cartLoginCon .cart_icon:hover {
+  cursor: pointer;
+  color: gold;
+}
+
+/* 로그인 버튼 */
+.login:hover {
+  cursor: pointer;
+  color: gold;
 }
 
 @media screen and (max-width: 978px) {
+  /* 외부 검색창 */
   .outer_search_con {
     display: none;
   }
 
+  /* 내부 검색창 */
   .inner_search_con {
     border: none;
     z-index: 100;
@@ -116,6 +110,14 @@
   .inner_search::placeholder {
     color: rgb(174, 167, 167);
   }
+
+  /* 카테고리(메뉴) */
+  .category_bars {
+    display: block;
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+  }
   .menu {
     width: 100vw;
     display: flex;
@@ -139,12 +141,5 @@
   .menu.action {
     opacity: 1;
     transform: translateX(0);
-  }
-
-  .category_bars {
-    display: block;
-    position: absolute;
-    left: 10px;
-    cursor: pointer;
   }
 }

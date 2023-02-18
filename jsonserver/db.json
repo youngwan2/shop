@@ -19,17 +19,7 @@
       "id": 3
     }
   ],
-  "cart": [
-    {
-      "product_id": "2",
-      "product_name": "Mens Casual Premium Slim Fit T-Shirts ",
-      "product_image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-      "size": "S",
-      "count": "1",
-      "total": "22.3",
-      "id": 1
-    }
-  ],
+  "cart": [],
   "reviews": [
     {
       "id": 1,
@@ -282,6 +272,46 @@
       "content": "fsdfds",
       "date": "2/17/2023, 3:15:56 PM",
       "id": 4
+    },
+    {
+      "_id": 2,
+      "title": "옷이 너무 작다",
+      "author": "qodna25",
+      "content": "큰 사이즈 가져와",
+      "date": "2/18/2023, 5:23:34 PM",
+      "id": 5
+    },
+    {
+      "_id": 2,
+      "title": "ㄹㅇㄹ",
+      "author": "qodna25",
+      "content": "ㄹㅇㄹ",
+      "date": "2/18/2023, 5:30:37 PM",
+      "id": 6
+    },
+    {
+      "_id": 2,
+      "title": "ㅅㄱㄷㅅ",
+      "author": "qodna25",
+      "content": "ㅅㄱㄷㅅㄱㄷ",
+      "date": "2/18/2023, 5:31:29 PM",
+      "id": 7
+    },
+    {
+      "_id": 2,
+      "title": "fdsf",
+      "author": "qodna25",
+      "content": "fdsfds",
+      "date": "2/18/2023, 5:35:00 PM",
+      "id": 8
+    },
+    {
+      "_id": 2,
+      "title": "gfdgf",
+      "author": "qodna25",
+      "content": "g",
+      "date": "2/18/2023, 5:38:10 PM",
+      "id": 9
     }
   ]
 }

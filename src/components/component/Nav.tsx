@@ -14,8 +14,16 @@ import { useFetch } from "../../API/useFetch";
 import axios from "axios";
 
 const Nav = () => {
+  type LoginUserType = {
+    username: string;
+    login: boolean;
+    id: string;
+  };
   const [action, setAction] = useState("");
   const [select, setSelect] = useState("");
+  const [appear, setAppear] = useState(false);
+
+  const [loginUser, setLoginUser] = useState<LoginUserType>();
 
   //로그아웃 클릭 시 세션스토리지 내 데이터 초기화 및 로그인 화면을 보여준다.
   function logoutHandler() {
@@ -28,16 +36,28 @@ const Nav = () => {
   const dispatch = useDispatch();
 
   // 유저 로그인 상태 확인을 위해 세션스토리지 내에서 state 정보 조회()
-  // 
-  const loginState = sessionStorage.getItem("login");
+  const userInfoJson = sessionStorage.getItem("userInfo");
 
+  useEffect(() => {
+    if (userInfoJson) {
+      const userInfo = JSON.parse(userInfoJson);
+      setLoginUser(userInfo);
+      console.log(userInfo);
+    }
+  }, [userInfoJson]);
+
+  // 三 버튼을 클릭하면 action에 클래스 action 이 할당된다.
+  // 만일 action 변수가 빈문자열이 아닌 경우에는 빈문자열을 action 변수에 할당
+  // 이를 통해 클릭 시 카테고리 메뉴가 숨겨지고 나타난다.
   const open = () => {
     if (action === "") setAction(styles.action);
     else setAction("");
   };
 
-  //GET API 영역
+  //GET API(카테고리 정보를 가져온다.) 영역
   const categories = useFetch("https://fakestoreapi.com/products/categories");
+
+  // 유저가 선택한 카테고리에 해당하는 상품 목록을 가져온다.
   const getProductByCategory = useCallback(
     async (select: string) => {
       if (select)
@@ -61,6 +81,7 @@ const Nav = () => {
         {" "}
         <FontAwesomeIcon icon={faBars} />
       </div>
+      <div className={styles.menu_layout}></div>
 
       <div className={"Nav"}>
         <article className={`${styles.inner_search_con} ${action}`}>
@@ -111,7 +132,16 @@ const Nav = () => {
           ></input>
         </div>
       </article>
+
       <div className={styles.cartLoginCon}>
+        {appear === false ? (
+          <article id={styles.welcome_modal}>
+            Hi ,{" "}
+            <span style={{ borderBottom: "1px solid white" }}>
+              {loginUser && loginUser.username}
+            </span>
+          </article>
+        ) : null}
         <article>
           <FontAwesomeIcon
             className={styles.cart_icon}
@@ -121,7 +151,9 @@ const Nav = () => {
             }}
           ></FontAwesomeIcon>
         </article>
-        {Boolean(loginState) === false ? (
+
+        {/* 로그인 유저 정보가 존재한다면 Login => Logout 으로 설정 */}
+        {Boolean(loginUser?.login) === false ? (
           <article
             className={styles.login}
             onClick={() => {

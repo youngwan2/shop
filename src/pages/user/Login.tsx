@@ -21,7 +21,7 @@ const Login = () => {
         if (res.ok === true) return res.json();
       })
       .then((result) => setGetUsers(result));
-  }, []);
+  }, [getUsers]);
 
   const loginCheck = () => {
     //유저 아이디가 존재한다면 해당 값이 위치한 인덱스를 반환, 없으면 -1 반환
@@ -38,8 +38,10 @@ const Login = () => {
     //앞서 통과된 유저아이디가 위치하는 인덱스의 비밀번호가 서로 일치하면 실행
     if (getUsers && idx)
       if (getUsers[idx].password === password) {
-        sessionStorage.setItem("login", "true");
-        localStorage.setItem("username", username);
+        const json = JSON.stringify({username:username, login:true, id:getUsers[idx].id})
+        sessionStorage.setItem("userInfo", json);
+     
+    
         dispatch(getUsername(username))
         navigate("/");
       } else return alert("Passwords do not match");

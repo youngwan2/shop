@@ -1,34 +1,42 @@
-import React, {useState, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import styles from "./UserQna.module.css";
+import axios from "axios";
 
 interface UserQnaType {
-    onHide:Function
+  onHide: Function;
+  userInfo: { username: string; id: number; login: boolean };
 }
 
-const UserQna = ({ onHide }:UserQnaType) => {
+const UserQna = ({ onHide,userInfo }: UserQnaType) => {
   const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
 
-//   Qna 의 등록 버튼을 클릭시 실행되는 함수
+
+  //   Qna 의 등록 버튼을 클릭시 실행되는 함수
   const registerFun = () => {
     const req = {
+      _id:userInfo.id,
       title: title,
-      author: "kim",
+      author: userInfo.username,
       content: content,
       date: new Date().toLocaleString("en-ko"),
     };
 
-    fetch("http://localhost:3001/inquiry", {
+    axios("http://localhost:3001/inquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(req),
+      data:req,
     });
     // 전송과 동시에 Qna 컴포넌트를 제거한다.
-    onHide(false)
+    onHide(false);
+
+    // Qna 컴포넌트를 제거 후 현재 페이지를 새로고침한다.
+    window.location.replace(`${window.location.href}`)
   };
+
+
 
   //   자동 새로고침 방지
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -37,11 +45,12 @@ const UserQna = ({ onHide }:UserQnaType) => {
 
   return (
     <>
-      <div 
-        onClick={()=>{
-            onHide(false)
+      <div
+        onClick={() => {
+          onHide(false);
         }}
-      className={styles.form_layout}></div>
+        className={styles.form_layout}
+      ></div>
       <section className={styles.UserQna}>
         <form id={styles.form} onSubmit={onSubmit}>
           <h3 style={{ color: "white", paddingBottom: "5px" }}>QnA</h3>
