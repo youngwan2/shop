@@ -19,7 +19,35 @@
       "id": 3
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "product_id": "5",
+      "product_name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "product_image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "size": "M",
+      "count": "12",
+      "total": "8340",
+      "id": 1
+    },
+    {
+      "product_id": "16",
+      "product_name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "product_image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+      "size": "S",
+      "count": "11",
+      "total": "329.45",
+      "id": 2
+    },
+    {
+      "product_id": "7",
+      "product_name": "White Gold Plated Princess",
+      "product_image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+      "size": "S",
+      "count": "55",
+      "total": "549.45",
+      "id": 3
+    }
+  ],
   "reviews": [
     {
       "id": 1,
@@ -246,80 +274,28 @@
   ],
   "inquiry": [
     {
-      "title": "제목",
-      "author": "kim",
-      "content": "김영완",
-      "date": "2023. 2. 17. 오후 1:40:12",
+      "_id": 2,
+      "title": "안녕하세요.",
+      "author": "qodna25",
+      "content": "반갑습니다.",
+      "date": "2/21/2023, 5:11:11 PM",
       "id": 1
     },
     {
-      "title": "이름",
-      "author": "kim",
-      "content": "ㄹㄴㅇㄹㅇㄴ",
-      "date": "2023. 2. 17. 오후 1:47:10",
+      "_id": 2,
+      "title": "뭘 못 바꿔주나요 아무런 말도 안 했는데",
+      "author": "qodna25",
+      "content": "??",
+      "date": "2/21/2023, 5:11:39 PM",
       "id": 2
     },
     {
-      "title": "돈내놔",
-      "author": "kim",
-      "content": "내돈내놩",
-      "date": "2023. 2. 17. 오후 3:00:24",
+      "_id": 2,
+      "title": "지금 매크로 답변 하시는건가요?",
+      "author": "qodna25",
+      "content": "왜 자꾸 같은 소리하세요--",
+      "date": "2/21/2023, 5:12:32 PM",
       "id": 3
-    },
-    {
-      "title": "fdsfds",
-      "author": "kim",
-      "content": "fsdfds",
-      "date": "2/17/2023, 3:15:56 PM",
-      "id": 4
-    },
-    {
-      "_id": 2,
-      "title": "옷이 너무 작다",
-      "author": "qodna25",
-      "content": "큰 사이즈 가져와",
-      "date": "2/18/2023, 5:23:34 PM",
-      "id": 5
-    },
-    {
-      "_id": 2,
-      "title": "ㄹㅇㄹ",
-      "author": "qodna25",
-      "content": "ㄹㅇㄹ",
-      "date": "2/18/2023, 5:30:37 PM",
-      "id": 6
-    },
-    {
-      "_id": 2,
-      "title": "ㅅㄱㄷㅅ",
-      "author": "qodna25",
-      "content": "ㅅㄱㄷㅅㄱㄷ",
-      "date": "2/18/2023, 5:31:29 PM",
-      "id": 7
-    },
-    {
-      "_id": 2,
-      "title": "fdsf",
-      "author": "qodna25",
-      "content": "fdsfds",
-      "date": "2/18/2023, 5:35:00 PM",
-      "id": 8
-    },
-    {
-      "_id": 2,
-      "title": "gfdgf",
-      "author": "qodna25",
-      "content": "g",
-      "date": "2/18/2023, 5:38:10 PM",
-      "id": 9
-    },
-    {
-      "_id": 2,
-      "title": "돈 내놩",
-      "author": "qodna25",
-      "content": "돈돈돈",
-      "date": "2/19/2023, 4:19:50 PM",
-      "id": 10
     }
   ]
 }
