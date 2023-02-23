@@ -24,7 +24,9 @@ const Reviews = () => {
   // 얻어온 리뷰 데이터를 reviews 변수에 할당
   const reviewFetch = (page: number) => {
     axios
-      .get(`http://localhost:3001/reviews?_page=${page}&_limit=10`)
+      .get(
+        `https://my-json-server.typicode.com/youngwan2/shop/reviews?_page=${page}&_limit=10`
+      )
       .then((res) => {
         return setReviews(res.data);
       });
