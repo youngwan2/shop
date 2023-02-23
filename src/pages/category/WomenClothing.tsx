@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Category.module.css";
-import { ProductByCategoryType } from "../../components/component/Types/Products";
+import { ProductByCategoryType } from "../../components/Types/Products";
 import { useNavigate } from "react-router-dom";
-import { ItemsType } from "../../components/component/Types/ItemsType";
+import { ItemsType } from "../../components/Types/ItemsType";
 
 const WomenClothing = ({ productByCategory }: ProductByCategoryType) => {
   const navigation = useNavigate();

@@ -52,8 +52,9 @@
   padding: 10px;
   color: #000000;
   background: transparent;
-  box-shadow: 0px 2px 1px black;
-  text-shadow: 1px 3px 0 #bcb9b9;
+  box-shadow: 0 2px 1px black;
+  background-color: rgba(237, 244, 246, 0.509);
+  text-shadow: 1px 1px 0 #f2f4fa;
 }
 
 .contents div {
@@ -71,7 +72,10 @@
 
 .contents .description:hover{
   transform: scale(1.03);
-  background-color: rgb(164, 33, 70);
+  background-color: rgb(33, 129, 164);
+  font-size: 16px;
+  z-index: 100;
+  transform: scale3d(1.1,1.2,1.1);
 }
 
 /* 상품 가격 */

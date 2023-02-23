@@ -1,0 +1,44 @@
+.pagination {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.707);
+  color: white;
+}
+
+.pagination:hover{
+  background-color: black;
+}
+
+.pagination_ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.pagination_ul .pagination_li {
+  transition: 0.5s;
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  margin: 0 5px 0 5px;
+  border-radius: 50px;
+}
+
+.pagination_ul .pagination_li:hover {
+  box-shadow: 0 0 30px gainsboro inset;
+  cursor: pointer;
+}
+
+/* 이전/다음 버튼 */
+.pagination_btn {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination_btn:hover {
+  color: yellow;
+}

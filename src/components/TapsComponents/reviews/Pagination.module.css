@@ -1,0 +1,35 @@
+.ul li{
+    transition: 0.5s;
+    display: inline-block;
+    margin: 8px;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    color:white;
+}
+
+.ul li:hover{
+  box-shadow: 0 0 30px gainsboro inset;
+  cursor: pointer;
+}
+
+
+.container{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.container p{
+    cursor: pointer;
+    display: flex;
+    color: white;
+    margin: 8px;    padding: 5px;
+}
+
+.container p:hover{
+    color:gold;
+}

@@ -22,13 +22,16 @@ const Cart = () => {
   useEffect(() => {
     if (cartId !== 0) {
       axios
-        .delete(`http://localhost:3001/cart/${cartId}`)
+        .delete(
+          `https://my-json-server.typicode.com/youngwan2/shop
+        /cart/${cartId}`
+        )
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
       window.location.replace(`${window.location.href}`);
     }
   }, [cartId]);
-  
+
   // 장바구니 아이템 추가
   const getItem = () => {
     axios
@@ -61,9 +64,8 @@ const Cart = () => {
                     <td width={50}>{cart.id}</td>
                     <td className={styles.product}>
                       <img
+                        className={styles.product_img}
                         style={{ display: "inline-block" }}
-                        width={100}
-                        height={100}
                         src={`${cart.product_image}`}
                         alt="item_image"
                       ></img>

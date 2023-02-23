@@ -1,0 +1,66 @@
+.CartModal {
+  transition: 1s;
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  right: -10px;
+  margin: 0;
+  padding-top: 5rem;
+  bottom: 0;
+  border: 1px solid black;
+  background-color: rgba(223, 214, 214, 0.366);
+  box-shadow: 0 1px 15px black;
+  z-index: 100;
+  border: none;
+}
+
+.CartModal.cartActive {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cartShift {
+  border-radius: 10px;
+  box-shadow: 1px 5px 15px rgb(32, 59, 70);
+  border-top: 1px solid rgb(97, 101, 101);
+  transition: 1s;
+  text-align: center;
+  width: 80%;
+  height: 35px;
+  margin: 0 auto;
+  background-color: rgb(216, 183, 32);
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.cartShift:hover{
+  background-color: rgb(127, 200, 255);
+}
+
+.product_info {
+  height: 100px;
+  width: 150px;
+  margin: 30px auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 15px;
+  cursor: pointer;
+}
+
+.product_info .product_content {
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  text-align: center;
+  line-height: 80px;
+  opacity: 0;
+}
+
+.product_info:hover > .product_content {
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+  background-color: rgba(118, 172, 235, 0.409);
+  visibility: visible;
+  opacity: 1;
+}

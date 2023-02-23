@@ -1,9 +1,0 @@
-.Layout{
-    width: 100vw;
-    height: 300vw;
-    position: fixed;
-    background-color: rgba(128, 128, 128, 0.59);
-    transform: translate(-50%,-50%);
-    left: 50%; top: 0; bottom: 0;
-    z-index: 1;
-}

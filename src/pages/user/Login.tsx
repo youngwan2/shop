@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getUsersType } from "../../components/component/Types/getUsersType";
+import { getUsersType } from "../../components/Types/getUsersType";
 import { getUsername } from "../../slice/usernameSlice";
 import { useDispatch } from "react-redux";
 
@@ -16,7 +16,7 @@ const Login = () => {
 
   // 서버에서 등록된 유저정보를 받아옴
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://my-json-server.typicode.com/youngwan2/shop/users")
       .then((res) => {
         if (res.ok === true) return res.json();
       })
@@ -38,11 +38,14 @@ const Login = () => {
     //앞서 통과된 유저아이디가 위치하는 인덱스의 비밀번호가 서로 일치하면 실행
     if (getUsers && idx)
       if (getUsers[idx].password === password) {
-        const json = JSON.stringify({username:username, login:true, id:getUsers[idx].id})
+        const json = JSON.stringify({
+          username: username,
+          login: true,
+          id: getUsers[idx].id,
+        });
         sessionStorage.setItem("userInfo", json);
-     
-    
-        dispatch(getUsername(username))
+
+        dispatch(getUsername(username));
         navigate("/");
       } else return alert("Passwords do not match");
   };
@@ -52,6 +55,7 @@ const Login = () => {
       <form className={styles.login_form}>
         <div className={styles.login_form_inner_con}>
           <h1 className={styles.title}>Welcome!</h1>
+         {/* 유저 아이디 */}
           <div>
             <input
               minLength={5}
@@ -66,6 +70,7 @@ const Login = () => {
             />
             <span></span>
           </div>
+          {/* 패스워드 */}
           <div>
             <input
               minLength={5}
@@ -80,10 +85,12 @@ const Login = () => {
             />
             <span></span>
           </div>
+          {/* 로그인 버튼 */}
           <div className={styles.login_etc}>
             <p onClick={loginCheck} className={styles.login_btn}>
               Login
             </p>
+            {/* 회원가입 안내 및 이동 버튼 */}
             <p
               className={styles.signup_btn}
               onClick={() => {

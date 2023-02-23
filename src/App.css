@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+html{
+  font-family: 'Courier New', Courier, monospace;
+}
 body {
   width: 100%;
   overflow-x: hidden;
@@ -53,7 +56,7 @@ body {
 
 /* Header.tsx */
 .Header {
-  transition: 1s;
+  z-index: 100;
   position: relative;
   width: 100vw;
   height: 50px;

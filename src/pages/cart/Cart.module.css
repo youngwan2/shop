@@ -1,47 +1,56 @@
-.table{
-    position: relative;
-    opacity: 0.9;
-    top: 150px;
-    width: 65%;
-    margin: 0 auto;
-    min-width: 600px;
-    color: white;
-    background-color:gray;
-    
+.table {
+  position: relative;
+  opacity: 0.9;
+  top: 150px;
+  width: 65%;
+  margin: 0 auto;
+  min-width: 600px;
+  color: white;
+  background-color: gray;
 }
 
-.tr th{
-    height: 50px;
-    background-color: rgb(0, 0, 0);
+.tr th {
+  height: 50px;
+  background-color: rgb(0, 0, 0);
 }
- .tr td{
-   background-color: rgb(55, 54, 54);
-   height: 100px; padding: 10px;
-}
-
-.payBtn, .cancelBtn{
-    padding: 7px 15px 7px 13px; width: 35px;
-    text-align: center;
-    font-size: 14px;
-    margin: 5px;
-    box-shadow: none;
-    background-color: rgb(247, 179, 9);
-    color: rgb(0, 0, 0);
+.tr td {
+  background-color: rgb(55, 54, 54);
+  height: 100px;
+  padding: 10px;
 }
 
-.payBtn:hover{
-    background-color: rgb(91, 144, 12);
-    color: white;
+.payBtn,
+.cancelBtn {
+  padding: 7px 15px 7px 13px;
+  width: 35px;
+  text-align: center;
+  font-size: 14px;
+  margin: 5px;
+  box-shadow: none;
+  background-color: rgb(247, 179, 9);
+  color: rgb(0, 0, 0);
 }
 
-.cancelBtn:hover{
-    background-color: rgb(218, 50, 20);
-    color: white;
+.payBtn:hover {
+  background-color: rgb(91, 144, 12);
+  color: white;
 }
 
+.cancelBtn:hover {
+  background-color: rgb(218, 50, 20);
+  color: white;
+}
 
+/* 상품이미지 */
+.product_img {
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  min-height: 80px;
+}
 
-.product{
-    display: flex; align-items: center;
-    padding: 13px;
+.product {
+  display: flex;
+  align-items: center;
+  padding: 13px;
 }

@@ -46,6 +46,15 @@
       "count": "55",
       "total": "549.45",
       "id": 3
+    },
+    {
+      "product_id": "4",
+      "product_name": "Mens Casual Slim Fit",
+      "product_image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+      "size": "M",
+      "count": "343",
+      "total": "5484.57",
+      "id": 4
     }
   ],
   "reviews": [
@@ -296,6 +305,30 @@
       "content": "왜 자꾸 같은 소리하세요--",
       "date": "2/21/2023, 5:12:32 PM",
       "id": 3
+    },
+    {
+      "_id": 2,
+      "title": "",
+      "author": "qodna25",
+      "content": "",
+      "date": "2/23/2023, 3:46:32 PM",
+      "id": 4
+    },
+    {
+      "_id": 2,
+      "title": "ㄹ",
+      "author": "qodna25",
+      "content": "",
+      "date": "2/23/2023, 3:48:15 PM",
+      "id": 5
+    },
+    {
+      "_id": 2,
+      "title": "54",
+      "author": "qodna25",
+      "content": "",
+      "date": "2/23/2023, 3:51:24 PM",
+      "id": 6
     }
   ]
 }

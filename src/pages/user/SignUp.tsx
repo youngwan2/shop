@@ -3,11 +3,10 @@ import styles from "./SignUp.module.css";
 import { useState, useEffect } from "react";
 import { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { getUsersType } from "../../components/component/Types/getUsersType";
+import { getUsersType } from "../../components/Types/getUsersType";
 
 const SignUp = () => {
   // 데이터베이스에서 얻어오는 유저정보의 타입지정
-
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -44,7 +43,7 @@ const SignUp = () => {
 
     // false 라면 정보가 없으므로 유저 데이터를 서버로 전송
     if (!filter[0]) {
-      fetch("http://localhost:3001/users", {
+      fetch("https://my-json-server.typicode.com/youngwan2/shop/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +56,7 @@ const SignUp = () => {
 
   // 유저 정보를 마운트 이후 서버에서 받아온다.
   useEffect(() => {
-    fetch("http://localhost:3001/users")
+    fetch("https://my-json-server.typicode.com/youngwan2/shop/users")
       .then((res) => {
         if (res.ok === true) {
           return res.json();

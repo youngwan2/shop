@@ -49,7 +49,7 @@
   cursor: pointer;
   transform: perspective(600px) scale(1.03) translateY(-50px) translateZ(40px) rotateX(-3deg);
 
-  box-shadow: 0px 5px 20px rgb(231, 227, 15);
+  box-shadow: 0px 5px 20px rgb(37, 176, 222);
 }
 
 /* 상품이미지 */

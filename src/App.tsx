@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import axios from "axios";
-import Header from "./components/component/Header";
-import Banner from "./components/component/Banner";
-import Products from "./components/component/Products";
+import Header from "./components/header/Header";
+import Banner from "./components/Banner";
+import Products from "./components/Products";
 import Electronics from "./pages/category/Electronics";
 import Jewelry from "./pages/category/Jewelry";
 import MenClothing from "./pages/category/MenClothing";
@@ -12,12 +12,10 @@ import Cart from "./pages/cart/Cart";
 import Login from "./pages/user/Login";
 import SignUp from "./pages/user/SignUp";
 import Detail from "./pages/detail/Detail";
-import { itemsType } from "./components/component/Products";
+import { itemsType } from "./components/Products";
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-
 
 function App() {
   type StateType = {
@@ -48,7 +46,10 @@ function App() {
       <Header />
 
       <Routes>
+        {/* 루트 페이지 */}
         <Route path="/" element={<Banner />}></Route>
+
+        {/* 상품 페이지 및 카테고리 */}
         <Route
           path="/products"
           element={<Products products={products} />}
@@ -69,6 +70,8 @@ function App() {
           path="/women's clothing"
           element={<WomenClothing productByCategory={productByCategory} />}
         ></Route>
+
+        {/* 그 외 디테일, 장바구니, 로그인, 회원가입 페이지 */}
         <Route path="/detail/:id" element={<Detail />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/login" element={<Login />}></Route>
