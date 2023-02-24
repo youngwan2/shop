@@ -16,8 +16,8 @@ const Detail = () => {
   const { id } = useParams();
   const [items, setItems] = useState<itemsType>();
   const [action, setAction] = useState("");
-  const detailItem = useCallback(() => {
-    axios
+  const detailItem = useCallback(async () => {
+    await axios
       .get(`https://fakestoreapi.com/products/${id}`)
       .then((response) => setItems(response.data));
   }, [id]);

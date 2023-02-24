@@ -23,8 +23,7 @@ const Cart = () => {
     if (cartId !== 0) {
       axios
         .delete(
-          `https://my-json-server.typicode.com/youngwan2/shop
-        /cart/${cartId}`
+          `https://my-json-server.typicode.com/youngwan2/shop/cart/${cartId}`
         )
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
@@ -33,9 +32,9 @@ const Cart = () => {
   }, [cartId]);
 
   // 장바구니 아이템 추가
-  const getItem = () => {
-    axios
-      .get("http://localhost:3001/cart")
+  const getItem = async () => {
+    await axios
+      .get("https://my-json-server.typicode.com/youngwan2/shop/cart")
       .then((res) => setItem(res.data))
       .catch((error) => console.error(error));
   };

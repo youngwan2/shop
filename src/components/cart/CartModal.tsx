@@ -13,8 +13,8 @@ const CartModal = ({ cartActive, setCartActive }: CartModalType) => {
   const [items, setItems] = useState<any[]>([]);
 
   // 장바구니 아이템 추가
-  const getItem = () => {
-    axios
+  const getItem = async() => {
+    await axios
       .get("https://my-json-server.typicode.com/youngwan2/shop/cart")
       .then((res) => setItems(res.data))
       .catch((error) => console.error(error));

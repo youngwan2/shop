@@ -15,7 +15,7 @@ const SignUp = () => {
 
   const navigate = useNavigate();
   // submit 버튼을 클릭하면 간단한 유효성 검사 후 서버로 유저 데이터를 전송
-  const signUpHandler = () => {
+  const signUpHandler = async () => {
     if (!username) {
       return alert("Enter your username.");
     }
@@ -43,7 +43,7 @@ const SignUp = () => {
 
     // false 라면 정보가 없으므로 유저 데이터를 서버로 전송
     if (!filter[0]) {
-      fetch("https://my-json-server.typicode.com/youngwan2/shop/users", {
+      await fetch("https://my-json-server.typicode.com/youngwan2/shop/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -55,7 +55,7 @@ const Login = () => {
       <form className={styles.login_form}>
         <div className={styles.login_form_inner_con}>
           <h1 className={styles.title}>Welcome!</h1>
-         {/* 유저 아이디 */}
+          {/* 유저 아이디 */}
           <div>
             <input
               minLength={5}

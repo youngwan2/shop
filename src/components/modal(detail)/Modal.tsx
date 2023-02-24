@@ -15,7 +15,7 @@ const Modal = ({ onClose, items }: ModalType) => {
   const [total, setTotal] = useState(0);
   const refCount = useRef() as RefObject<HTMLInputElement>;
   const refModal = useRef() as RefObject<HTMLInputElement>;
-  
+
   // 유저가 Add (장바구니 추가) 버튼을 클릭 후 사이즈 설정 시 총 금액 명시
   function totalCal(e: ChangeEvent<HTMLInputElement>) {
     const value = Number(e.target.value);
@@ -26,7 +26,7 @@ const Modal = ({ onClose, items }: ModalType) => {
     <>
       <article ref={refModal} className={styles.Modal}>
         <form
-          action="http://localhost:3001/cart"
+          action="https://my-json-server.typicode.com/youngwan2/cart"
           method="post"
           className={styles.modal_form}
         >

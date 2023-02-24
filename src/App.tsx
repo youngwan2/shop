@@ -30,8 +30,8 @@ function App() {
   }) as itemsType;
 
   const [products, setProducts] = useState<any>();
-  const getProductsAPI = () => {
-    axios
+  const getProductsAPI = async () => {
+    await axios
       .get("https://fakestoreapi.com/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.log(error));

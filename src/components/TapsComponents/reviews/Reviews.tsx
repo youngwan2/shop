@@ -22,8 +22,8 @@ const Reviews = () => {
 
   // 유저가 선택한 postPage 에 해당하는 리뷰 정보를 get 요청해서 얻어온다.
   // 얻어온 리뷰 데이터를 reviews 변수에 할당
-  const reviewFetch = (page: number) => {
-    axios
+  const reviewFetch = async (page: number) => {
+    await axios
       .get(
         `https://my-json-server.typicode.com/youngwan2/shop/reviews?_page=${page}&_limit=10`
       )

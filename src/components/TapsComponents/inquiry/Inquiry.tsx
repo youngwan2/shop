@@ -45,8 +45,9 @@ const Inquiry = () => {
 
   // 리듀스에서 가져온 현재 페이지 정보에 따라 QnA 게시글 정보를 가져온다.
   useEffect(() => {
-    fetch(`https://my-json-server.typicode.com/youngwan2/shop
-    /inquiry?_limit=5&_page=${newCurrentPage}`)
+    fetch(
+      `https://my-json-server.typicode.com/youngwan2/shop/inquiry?_limit=5&_page=${newCurrentPage}`
+    )
       .then((response) => {
         if (response.ok === true) return response.json();
       })

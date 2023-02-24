@@ -12,7 +12,7 @@ const UserQna = ({ onHide, userInfo }: UserQnaType) => {
   const [content, setContent] = useState("");
 
   //   Qna 의 등록 버튼을 클릭시 실행되는 함수
-  const registerFun = () => {
+  const registerFun = async () => {
     if (title.length <= 5 || content.length <= 10) {
       return alert("Please follow the bulletin board rules.");
     }
@@ -24,7 +24,7 @@ const UserQna = ({ onHide, userInfo }: UserQnaType) => {
       date: new Date().toLocaleString("en-ko"),
     };
 
-    axios("https://my-json-server.typicode.com/youngwan2/shop/inquiry", {
+    await axios("https://my-json-server.typicode.com/youngwan2/shop/inquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
