@@ -146,21 +146,6 @@ input[type="text"],input[type="password"],input[type="tel"],input[type='number']
 }
 
 
-/* button 공통 스타일 적용 */
-button {
-  transition: 1s;
-  text-align: center;
-  width: 48%;
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  margin: 1rem 5px 5px 5px;
-  font-size: 17px;
-  cursor: pointer;
-  box-shadow: 1px 5px 5px 2px gray;
-}
 
 /* input valid */
 input + span {

@@ -17,7 +17,7 @@
 
 /* 상품이미지 */
 .image {
-  box-shadow: 1px 5px 15px ;
+  box-shadow: 1px 5px 15px;
   cursor: pointer;
   transition: 1s;
   min-width: 400px;
@@ -66,16 +66,15 @@
   transition: 1s;
   margin-top: 0.25rem;
   background-color: rgba(56, 57, 58, 0.735);
-  color:white;
+  color: white;
   line-height: 25px;
 }
 
-.contents .description:hover{
-  transform: scale(1.03);
+.contents .description:hover {
   background-color: rgb(33, 129, 164);
   font-size: 16px;
   z-index: 100;
-  transform: scale3d(1.1,1.2,1.1);
+  transform: scale3d(1.03, 1.02, 1.05);
 }
 
 /* 상품 가격 */
@@ -83,27 +82,36 @@
   margin-top: 1.25rem;
 }
 
-.price, .vote{
+.price,
+.vote {
   font-size: 18px;
 }
 
+/* 버튼 컨테이너 */
+.btn_con {
+  margin-top: 1rem;
+  text-align: center;
+}
 /* 장바구니 추가/구매 버튼 */
-.putBtn,.purchaseBtn {
+.putBtn,
+.purchaseBtn {
+  transition: 1s;
   background-color: rgba(46, 44, 44, 0.926);
   height: 50px;
   border: none;
+  width: 40%;
+  color: white;
+  margin: 0 5px 0 5px;
   border-radius: 0px;
   box-shadow: none;
+  font-size: 1.1rem;
 }
 
-.putBtn:hover,.purchaseBtn:hover{
-  box-shadow: 1px 5px 15px gray,
-  inset 200px 80px rgb(19, 89, 136),
-  inset -200px -80px powderblue;
-
+.putBtn:hover,
+.purchaseBtn:hover {
+  box-shadow: 1px 5px 15px gray, inset 200px 80px rgb(19, 89, 136),
+    inset -200px -80px powderblue;
 }
-
-/* 구매 버튼 */
 
 /* 로딩스피너 이미지 */
 .loadingImage {

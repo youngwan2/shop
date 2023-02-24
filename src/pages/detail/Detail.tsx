@@ -72,7 +72,7 @@ const Detail = () => {
               </div>
               {/* 디테일 상품 설명 내용ㄱ  */}
               <div className={styles.description}>{items.description}</div>
-              <div>
+              <div className={styles.btn_con}>
                 {/* 구매/장바구니 추가 버튼 */}
                 <button className={styles.purchaseBtn}>Purchase</button>
                 <button

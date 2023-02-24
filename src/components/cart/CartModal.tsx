@@ -15,7 +15,7 @@ const CartModal = ({ cartActive, setCartActive }: CartModalType) => {
   // 장바구니 아이템 추가
   const getItem = async() => {
     await axios
-      .get("https://my-json-server.typicode.com/youngwan2/shop/cart")
+      .get("/shop/cart")
       .then((res) => setItems(res.data))
       .catch((error) => console.error(error));
   };
