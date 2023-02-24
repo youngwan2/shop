@@ -25,7 +25,7 @@ const Reviews = () => {
   const reviewFetch = async (page: number) => {
     await axios
       .get(
-        `https://my-json-server.typicode.com/youngwan2/shop/reviews?_page=${page}&_limit=10`
+        `http://localhost:3001/reviews?_page=${page}&_limit=10`
       )
       .then((res) => {
         return setReviews(res.data);

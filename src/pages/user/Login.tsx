@@ -16,7 +16,7 @@ const Login = () => {
 
   // 서버에서 등록된 유저정보를 받아옴
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/youngwan2/shop/users")
+    fetch("http://localhost:3001/users")
       .then((res) => {
         if (res.ok === true) return res.json();
       })
@@ -48,6 +48,7 @@ const Login = () => {
         dispatch(getUsername(username));
         navigate("/");
       } else return alert("Passwords do not match");
+      return 
   };
 
   return (

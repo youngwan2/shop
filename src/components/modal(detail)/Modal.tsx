@@ -26,7 +26,7 @@ const Modal = ({ onClose, items }: ModalType) => {
     <>
       <article ref={refModal} className={styles.Modal}>
         <form
-          action="https://my-json-server.typicode.com/youngwan2/cart"
+          action="http://localhost:3001/cart"
           method="post"
           className={styles.modal_form}
         >

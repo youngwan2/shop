@@ -24,7 +24,7 @@ const UserQna = ({ onHide, userInfo }: UserQnaType) => {
       date: new Date().toLocaleString("en-ko"),
     };
 
-    await axios("https://my-json-server.typicode.com/youngwan2/shop/inquiry", {
+    await axios("http://localhost:3001/inquiry", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
