@@ -6,9 +6,9 @@
   height: 100vh;
   position: fixed;
   right: -10px;
-  margin: 0;
+
   padding-top: 5rem;
-  bottom: 0;
+  bottom: -8px;
   border: 1px solid black;
   background-color: rgba(223, 214, 214, 0.366);
   box-shadow: 0 1px 15px black;

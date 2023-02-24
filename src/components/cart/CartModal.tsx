@@ -15,7 +15,7 @@ const CartModal = ({ cartActive, setCartActive }: CartModalType) => {
   // 장바구니 아이템 추가
   const getItem = async() => {
     await axios
-      .get("/shop/cart")
+      .get("http://localhost:3001/cart")
       .then((res) => setItems(res.data))
       .catch((error) => console.error(error));
   };

@@ -12,14 +12,17 @@
   align-items: center;
   background-color: rgba(106, 162, 222, 0.234);
   z-index: 100;
-  color:black !important
+  color: black !important;
 }
 
 @keyframes appear {
-  from {transform:scale(0.1)}
-  to {transform:scale(1.0)}
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-
 
 .response_inner_con {
   transition: 1s;
@@ -49,7 +52,10 @@
   background-color: azure;
   width: 100%;
   border-bottom: 2px solid gray;
+  margin-bottom: 5px;
 }
+
+
 /* 질문 디테일 내용 영역 */
 .D_title {
   padding-top: 1rem;
@@ -57,6 +63,9 @@
 }
 .detail_content {
   padding: 15px 10px 15px 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border: 1px solid black;
 }
 
 /* 응답 영역 */
@@ -65,19 +74,33 @@
   line-height: 25px;
 }
 
-.A_area p{
-    padding: 10px;
+.A_area p {
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 /* 닫기 버튼 */
 .close_btn {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
   position: absolute;
   bottom: 15px;
   width: 50%;
   max-width: 300px;
 
-  padding: 10px;
+  padding: 11px;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: none;
+}
+
+.close_btn:hover {
+  background-color: goldenrod;
+  color: black;
+  border: none;
+  padding: 12px 0 12px 0;
 }

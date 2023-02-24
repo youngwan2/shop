@@ -45,9 +45,7 @@ const Inquiry = () => {
 
   // 리듀스에서 가져온 현재 페이지 정보에 따라 QnA 게시글 정보를 가져온다.
   useEffect(() => {
-    fetch(
-      `http://localhost:3001/inquiry?_limit=5&_page=${newCurrentPage}`
-    )
+    fetch(`http://localhost:3001/inquiry?_limit=5&_page=${newCurrentPage}`)
       .then((response) => {
         if (response.ok === true) return response.json();
       })
@@ -59,13 +57,15 @@ const Inquiry = () => {
       {" "}
       <section className="Inquiry">
         <article id={styles.table_outer_container}>
-          <button
-            className={styles.registrationBtn}
-            style={{ width: "150px", marginTop: "30px" }}
-            onClick={loginCheck}
-          >
-            Registration
-          </button>
+          <div style={{height:"90px"}}>
+            <button
+              className={styles.registrationBtn}
+              style={{ width: "150px", marginTop: "30px" }}
+              onClick={loginCheck}
+            >
+              Registration
+            </button>
+          </div>
           <table id={styles.inquiry_table}>
             <thead>
               <tr>

@@ -40,8 +40,7 @@ const Response = ({ open, setOpen, userReq, index }: ResponseType) => {
         <div className={styles.A_area}>
           <h3>A.</h3>
           <p>
-            죄송하지만 고객님 그건 못 바꿔 줍니다. 애초에 다 설명해드린
-            부분입니다.{" "}
+            판매자가 응답하는 영역.{" "}
           </p>
         </div>
         <button

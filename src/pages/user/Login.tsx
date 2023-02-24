@@ -48,7 +48,7 @@ const Login = () => {
         dispatch(getUsername(username));
         navigate("/");
       } else return alert("Passwords do not match");
-      return 
+    return;
   };
 
   return (

@@ -5,8 +5,6 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2rem;
   width: 100vw;
-  margin-top: 2rem;
-  
 }
 
 /* 외부 프레임(카테고리 페이지 프레임) */
@@ -17,7 +15,6 @@
   left: 50%;
   top: 10%;
   transform: translate(-50%);
-  
 }
 
 /*  내부 프레임(상품 아이템 정렬에 활용)*/
@@ -47,7 +44,8 @@
 
 .items:hover {
   cursor: pointer;
-  transform: perspective(600px) scale(1.03) translateY(-50px) translateZ(40px) rotateX(-3deg);
+  transform: perspective(600px) scale(1.03) translateY(-50px) translateZ(40px)
+    rotateX(-3deg);
 
   box-shadow: 0px 5px 20px rgb(37, 176, 222);
 }

@@ -63,22 +63,29 @@
 
 /* 질문 등록 버튼 */
 .registrationBtn {
-  background:radial-gradient(200px,white, black);
-  box-shadow: 0 0 0 0, inset 1px 1px 10px 1px rgba(64, 64, 64, 0.53);
+  
+  box-shadow: 0 0 0 0, inset 1px 1px 10px 1px rgba(0, 0, 0, 0.489);
   color: rgb(41, 41, 43);
   border-radius: 0;
-  border-bottom: 5px solid black;
+  border: none;
+  padding: 15px 0 15px 0;
   border-bottom-left-radius:10px ;
   border-bottom-right-radius:10px ;
+  border-bottom: 5px solid rgb(5, 50, 69);
   transform: perspective(600px);
   transform-style: preserve-3d;
+  transition: 0.3s;
+  font-size: 16px;
 }
 
 .registrationBtn:hover {
+  font-weight: 600;
   border-color: rgba(9, 63, 86, 0.828);
-
-  box-shadow: 1px 0px 0px transparent, inset 300px 0px rgba(63, 159, 237, 0.921); ;
+  transform: translateY(5px);
+  border: none;
+  box-shadow: 1px 1px 1px black, inset 300px 0px rgba(63, 159, 237, 0.921); ;
   background-color: rgb(106, 147, 194);
-  color:rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+  letter-spacing: 1px;
 }
 

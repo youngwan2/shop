@@ -20,9 +20,10 @@ const Cart = () => {
 
   // 장바구니 아이템 삭제
   useEffect(() => {
+    console.log(cartId);
     if (cartId !== 0) {
       axios
-        .delete(`http://localhost:3001/shop/cart/${cartId}`)
+        .delete(`http://localhost:3001/cart/${cartId}`)
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
       window.location.replace(`${window.location.href}`);
@@ -32,7 +33,7 @@ const Cart = () => {
   // 장바구니 아이템 추가
   const getItem = () => {
     axios
-      .get("http://localhost:3001/youngwan2/shop/cart")
+      .get("http://localhost:3001/cart")
       .then((res) => setItem(res.data))
       .catch((error) => console.error(error));
   };
