@@ -21,7 +21,7 @@ const Taps = () => {
               key={Math.random() * 10000 * i}
               style={
                 tapTitle[count] === tapsTitle
-                  ? { background: "rgb(71, 230, 255)", color: "black" }
+                  ? { background: "rgb(199, 9, 72)"}
                   : { background: "black" }
               }
               onClick={() => {

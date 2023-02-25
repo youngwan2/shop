@@ -143,7 +143,10 @@ const SignUp = () => {
             <button onClick={signUpHandler} id={styles.submit_btn}>
               submit
             </button>
-            <p id={styles.prev_btn}>
+            <p id={styles.prev_btn}
+             onClick={()=>{
+              navigate('/login')
+             }}>
               Would you like to return to the login screen?
             </p>
           </div>

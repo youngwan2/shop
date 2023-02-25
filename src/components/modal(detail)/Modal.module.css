@@ -19,15 +19,20 @@
   top: 50%;
   width: 80vw;
   height: 60vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(212, 24, 89, 0.857);
+}
+
+.Modal input,
+.Modal select {
+  border: 2px solid black;
 }
 
 @keyframes appear {
   from {
-     opacity:0.1;
+    opacity: 0.1;
   }
   to {
-     opacity:1;
+    opacity: 1;
   }
 }
 
@@ -40,7 +45,7 @@
 .size {
   margin-top: 2rem;
   text-align: center;
-  letter-spacing: 2.5px;
+  letter-spacing: 3.5px;
 }
 
 /* 갯수 */
@@ -55,17 +60,52 @@
 /* 닫기 버튼 */
 .closeBtn {
   width: 30px;
+  padding: 10px 5px 10px 5px;
+  margin-top: 1rem;
   position: absolute;
   right: 8px;
   top: -2px;
+  cursor: pointer;
 }
 
+/* 추가버튼 */
+.addBtn {
+  padding: 6px 15px 6px 15px;
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: goldenrod;
+  border: none;
+  color: black;
+}
 /* 총 달러 */
+.total_con h3{
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+.total_con{
+  margin-top: 3rem;
+}
+
+.total_con input{
+  margin-top: 0.5em;
+  background-color: white;
+  box-shadow: 1px 1px 5px 4px black inset;
+  border: none;
+}
 .total {
   margin-top: 5rem;
+  border: none;
   text-align: center;
   font-size: 20px;
-  border: 0;
   background-color: transparent;
-  border-bottom: 1px solid black;
+  border-radius: 5px;
+  border-bottom: 2px solid black;
 }

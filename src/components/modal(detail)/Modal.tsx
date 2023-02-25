@@ -22,6 +22,8 @@ const Modal = ({ onClose, items }: ModalType) => {
     setTotal((total) => (total = value * items.price));
   }
 
+
+
   return (
     <>
       <article ref={refModal} className={styles.Modal}>
@@ -83,9 +85,10 @@ const Modal = ({ onClose, items }: ModalType) => {
               max={"999"}
               name="count"
             ></input>
-            <div>
-              <h3 style={{ paddingTop: "2rem" }}>Total</h3>
-              {/* 총 가격 */}
+
+            {/* 총 가격 */}
+            <div className={styles.total_con}>
+              <h3>Total</h3>
               <span>$</span>
               <label htmlFor="total"></label>
               <input

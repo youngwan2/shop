@@ -47,7 +47,7 @@
   transform: perspective(600px) scale(1.03) translateY(-50px) translateZ(40px)
     rotateX(-3deg);
 
-  box-shadow: 0px 5px 20px rgb(37, 176, 222);
+  box-shadow: 0px 5px 20px rgb(65, 61, 62);
 }
 
 /* 상품이미지 */
@@ -57,21 +57,42 @@
 
 /* 상품 제목 */
 .contents h4 {
+  transition: 1s;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  line-height: 20px;
+  max-height:50px ;
+  min-height: 50px;
+  font-size: 16px;
   box-shadow: 0px 5px 5px black inset;
-  padding: 7px;
+  padding: 10px 0 10px 0;
+  margin-bottom: 1rem;
+}
+
+.contents h4:hover{
+  background-color: rgb(240, 13, 112);
+  translate: 0 0 50px;
+  scale: 1.2;
+  max-height: 100%;
+  color:white;
 }
 
 /* 상품 명세 */
 .contents {
-  color: rgba(255, 255, 255, 0.899);
+  transition: 2s;
+  color: rgb(255, 255, 255);
   height: 200px;
+  letter-spacing: 1px;
   padding: 10px;
   margin-top: 2rem;
   line-height: 28px;
-  border-top: 1px solid black;
-  background-color: rgb(0, 0, 0);
-  font-size: 15px;
+  border-top: 1px solid rgb(163, 153, 153);
+  background: linear-gradient(160deg, rgb(154, 97, 11), rgb(136, 87, 2));
+  font-size: 16px;
+}
+
+.contents{
+  box-shadow: 0 0 0 0, 0px 500px 15px black inset;
+  color: white;
 }

@@ -24,6 +24,7 @@ const Nav = () => {
   const [select, setSelect] = useState("");
   const [appear] = useState(false);
   const [cartActive, setCartActive] = useState(false);
+  const [getError,setGetError] = useState();
 
   const [loginUser, setLoginUser] = useState<LoginUserType>();
 
@@ -70,7 +71,7 @@ const Nav = () => {
         await axios
           .get(`https://fakestoreapi.com/products/category/${select}`)
           .then((response) => response.data && dispatch(send(response.data)))
-          .catch((error) => console.log(error));
+          .catch((error) => console.error(error));
     },
     [dispatch]
   );
@@ -118,7 +119,7 @@ const Nav = () => {
               );
             })
           ) : (
-            <div>data load failed...</div>
+            <div className={styles.get_cate_error}>data load failed...</div>
           )}
         </ul>
       </div>

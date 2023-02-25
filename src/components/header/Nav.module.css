@@ -7,7 +7,6 @@
   z-index: 100;
 }
 .menu li {
-  transition: 1s;
   display: inline-block;
   list-style: none;
   margin: 22px 25px 22px 25px;
@@ -15,12 +14,12 @@
 
 .menu .menu_list .link {
   position: relative;
-  color: rgb(207, 206, 206);
+  color: rgb(255, 255, 255);
   transition: 0.1s;
   margin: 0 20px 0 20px;
 }
 .menu li:hover .link {
-  color: gold;
+  color: rgb(255, 230, 90);
 }
 /* 카테고리 바 내부 검색창(미디어 쿼리 적용 시) */
 .inner_search_con {
@@ -36,7 +35,8 @@
   position: absolute;
   z-index: 100;
   width: 60vw;
-  background: black;
+  color:black;
+  background: rgb(0, 0, 0);
   border-radius: 5px;
 }
 .outer_search {
@@ -67,6 +67,16 @@
 .login:hover {
   cursor: pointer;
   color: gold;
+}
+
+
+/* 카테고리 데이터 GET 실패 시 대체 메시지 */
+.get_cate_error {
+  position: absolute;
+  color: white;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 @media screen and (max-width: 978px) {

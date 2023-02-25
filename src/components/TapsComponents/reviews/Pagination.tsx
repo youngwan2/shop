@@ -15,7 +15,7 @@ const Pagination = () => {
   }) as number;
 
   //페이지네이션에서 확인할 수 있는 페이지의 총 갯수
-  const [totalPage] = useState(Math.ceil(37 / 10)); // 총 페이지 번호 10
+  const [totalPage] = useState(Math.ceil(29 / 10)); // 총 페이지 번호 10
 
   // 현재 페이지가 속한 그룹 구하기
   const displayPage = 5; //-> 보여줄 페이지 수

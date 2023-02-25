@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   background-position: center;
   background-size: cover;
+  background:rgba(255, 255, 255, 0.895);
 }
 
 /* 페이지 컴포넌트 처리 영역 */
@@ -62,10 +63,11 @@ body {
   height: 50px;
   min-width: 300px;
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 1px 15px rgb(219, 213, 213);
 }
 
 /* Banner.tsx */

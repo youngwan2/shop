@@ -7,14 +7,14 @@ const Carousel = () => {
 
   return (
     <>
-    {/* pageNum 이 증가 및 감소할 때 마다 페이지 전환 */}
+      {/* pageNum 이 증가 및 감소할 때 마다 페이지 전환 */}
       <article
         style={{ transform: `translate(${-100 * pageNum}vw)` }}
         className={styles.Carousel}
       >
-        {[0, 1, 2, 3].map((image) => {
+        {[0, 1, 2, 3].map((image, i) => {
           return (
-            <div key={Math.random() * 10000} className={styles.item_con}>
+            <div key={Math.random() * 10000 * i} className={styles.item_con}>
               <img
                 className={styles.item}
                 src={

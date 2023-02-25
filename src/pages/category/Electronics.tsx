@@ -52,7 +52,7 @@ const Electronics = ({ productByCategory }: ProductByCategoryType) => {
                       <div>${items.price.toFixed(2)} </div>
                       <div>
                         {items.rating.rate}
-                        {"(" + items.rating.count + "명)"}
+                        {"(" + items.rating.count + " persons)"}
                       </div>
                       <div>{items.category}</div>
                     </div>

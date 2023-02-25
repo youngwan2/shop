@@ -1,7 +1,10 @@
 .detail_taps {
   width: 100%;
-  box-shadow: 0 30px 20px 1px black;
+
+  box-shadow: 0 10px 20px 1px rgb(77, 74, 74), 0 20px 20px black;
   display: flex;
+  border-radius: 10%;
+  background-color: rgba(253, 253, 255, 0);
   justify-content: center;
 }
 
@@ -11,10 +14,10 @@
   width: 30%;
   font-size: 16px;
   max-width: 200px;
-  color:white;
+  color: white;
   margin: 1rem;
   padding: 15px 0px 15px 0;
-  border-bottom: 5px solid rgb(89, 86, 86);
+  border-bottom: 5px solid rgb(203, 186, 186);
 }
 
 .detail_taps button:hover {
@@ -24,5 +27,5 @@
   box-shadow: 1px 1px 5px rgb(107, 103, 103);
   border-bottom: none;
   color: rgb(255, 255, 255);
-  background-color: rgba(37, 137, 218, 0.629) !important;
+  background-color: rgb(0, 0, 0) !important;
 }
