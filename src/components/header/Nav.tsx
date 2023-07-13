@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Nav.module.css";
 import CartModal from "../cart/CartModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,7 +23,7 @@ const Nav = () => {
   const [select, setSelect] = useState("");
   const [appear] = useState(false);
   const [cartActive, setCartActive] = useState(false);
-  const [getError,setGetError] = useState();
+  // const [getError,setGetError] = useState();
 
   const [loginUser, setLoginUser] = useState<LoginUserType>();
 
@@ -32,6 +31,7 @@ const Nav = () => {
   function logoutHandler() {
     navigate("/login");
     sessionStorage.clear();
+    window.location.reload()
   }
 
   // 레듀서 영역
@@ -39,7 +39,7 @@ const Nav = () => {
   const dispatch = useDispatch();
 
   // 유저 로그인 상태 확인을 위해 세션스토리지 내에서 state 정보 조회()
-  const userInfoJson = sessionStorage.getItem("userInfo");
+  const userInfoJson = sessionStorage.getItem("login");
 
   useEffect(() => {
     if (userInfoJson) {
@@ -90,6 +90,7 @@ const Nav = () => {
       </div>
       <div className={styles.menu_layout}></div>
 
+{/* 三 메뉴 아이콘 클릭 시 내부 검색창(페이크) */}
       <div className={"Nav"}>
         <article className={`${styles.inner_search_con} ${action}`}>
           <label htmlFor="inner_search"></label>
@@ -124,6 +125,7 @@ const Nav = () => {
         </ul>
       </div>
 
+{/* 검색창(페이크) */}
       <article className={styles.outer_search_con}>
         <div>
           <label htmlFor="search">

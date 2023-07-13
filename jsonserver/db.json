@@ -1,24 +1,4 @@
 {
-  "users": [
-    {
-      "username": "qodna2535",
-      "name": "fdsfsfds",
-      "password": "dktltl11",
-      "id": 1
-    },
-    {
-      "username": "qodna25",
-      "name": "fsdfdsfds",
-      "password": "dktltl11",
-      "id": 2
-    },
-    {
-      "username": "qodna25355",
-      "name": "fsdfdsfsd",
-      "password": "dktltl11",
-      "id": 3
-    }
-  ],
   "cart": [],
   "reviews": [
     {
@@ -204,6 +184,13 @@
       "content": "할 말이 없으면 말을 하면 안 됩니다잉",
       "date": "2/24/2023, 9:39:38 PM",
       "id": 1
+    },
+    {
+      "title": "fdsfdsfsdfsdfsd",
+      "author": "54545454",
+      "content": "fsdfsdfsdfsdfds",
+      "date": "7/13/2023, 1:01:50 PM",
+      "id": 2
     }
   ]
 }

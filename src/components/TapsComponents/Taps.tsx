@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../TapsComponents/Taps.module.css";
 import Description from "./description/Description";
 import Reviews from "./reviews/Reviews";

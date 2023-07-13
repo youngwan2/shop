@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 import styles from "./Detail.module.css";
 import { useState, useEffect, useCallback } from "react";
@@ -14,6 +13,7 @@ const Detail = () => {
   const [modalState, setModalState] = useState(false);
 
   const { id } = useParams();
+  console.log("현재 파라미터 아이디:",id)
   const [items, setItems] = useState<itemsType>();
   const [action, setAction] = useState("");
   const detailItem = useCallback(async () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CartModal.module.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -12,14 +12,15 @@ const CartModal = ({ cartActive, setCartActive }: CartModalType) => {
   const navigate = useNavigate();
   const [items, setItems] = useState<any[]>([]);
 
-  // 장바구니 아이템 추가
-  const getItem = async() => {
+  // 추가된 장바구니 아이템 읽어와서 items 변수에 할당한다.
+  const getItem = async () => {
     await axios
       .get("http://localhost:3001/cart")
       .then((res) => setItems(res.data))
       .catch((error) => console.error(error));
   };
 
+  /* 컴포넌트가 마운트 되고 한 번만 getItem 함수를 호출한다. */
   useEffect(() => {
     getItem();
   }, []);

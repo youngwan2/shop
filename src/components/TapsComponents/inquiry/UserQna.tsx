@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import { useState, FormEvent } from "react";
 import styles from "./UserQna.module.css";
 import axios from "axios";
 

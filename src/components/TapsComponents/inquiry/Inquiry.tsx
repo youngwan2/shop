@@ -30,16 +30,18 @@ const Inquiry = () => {
   }) as number;
 
   // 로그인이 안 된 상태에서 QnA 등록 버튼을 클릭하면 로그인하고 오라고 알린다.
-  const loginCheck = () => {
-    if (userInfo) if (userInfo.login === true) return setHide(true);
+  const isLogin = () => {
+    if (!userInfo?.login) return alert("Please log in and try");
 
-    return alert("Please log in and try");
+    /* 유저정보가 없으면 undefined 반환 있으면 .login 에 접근해서 true 라면 setHide() 호출 */
+    userInfo?.login && setHide(true);
   };
 
   // 세션 스토리지에서 로그인한 유저 정보를 가져온다
   // 이 정보를 활용해서 권한이 있는 유저만 QnA 에 작성토록 한다.
   useEffect(() => {
-    const sessionUserInfo = sessionStorage.getItem("userInfo");
+    const sessionUserInfo = sessionStorage.getItem("login") ||`{"username":"익명","login":false}`;
+    console.log(JSON.parse(sessionUserInfo))
     if (sessionUserInfo) setUserInfo(JSON.parse(sessionUserInfo));
   }, []);
 
@@ -57,11 +59,12 @@ const Inquiry = () => {
       {" "}
       <section className="Inquiry">
         <article id={styles.table_outer_container}>
-          <div style={{height:"90px"}}>
+          {/* 문의글 등록 버튼( Registration) */}
+          <div style={{ height: "90px" }}>
             <button
               className={styles.registrationBtn}
               style={{ width: "150px", marginTop: "30px" }}
-              onClick={loginCheck}
+              onClick={isLogin}
             >
               Registration
             </button>
